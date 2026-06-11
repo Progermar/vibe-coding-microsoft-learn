@@ -168,3 +168,40 @@ Eu uso vibe coding com processo: primeiro dou contexto, gero uma spec, deixo o a
 ## Próximo passo
 
 Criar a estrutura inicial de pastas e arquivos para organizar o estudo do curso.
+
+---
+
+## Registro da sessão
+
+### 2026-06-11 — Fundamentos Git, GitHub e handoff assistido por IA
+
+Aprendizados consolidados:
+
+- README.md apresenta o repositório.
+- .gitignore define arquivos que o Git deve ignorar.
+- main é a branch principal local.
+- origin/main é a branch principal no GitHub.
+- git status mostra o estado do repositório.
+- working tree clean significa que não há alterações pendentes.
+- untracked significa arquivo novo ainda não rastreado.
+- git add prepara o arquivo para commit.
+- staged significa preparado para commit.
+- git commit cria o registro oficial da mudança.
+- -m define a mensagem do commit.
+- SHA identifica um commit.
+- git push envia commits locais para o GitHub.
+- git pull traz commits do GitHub para o computador.
+- merge junta uma branch ou subtarefa aprovada na main.
+- gate é um ponto de aprovação antes de avançar.
+
+Fluxo local praticado:
+
+editar arquivo → git add → git commit → git push
+
+Fluxo remoto pelo GPT:
+
+GPT edita no GitHub → commit nasce no remoto → usuário roda git pull → computador atualizado
+
+Próximo teste:
+
+Rodar git pull localmente para receber esta atualização feita pelo GPT no GitHub.
