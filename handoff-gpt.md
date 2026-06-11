@@ -157,6 +157,32 @@ Exemplo:
 - testes passando;
 - diff revisado.
 
+### DRY / Don't Repeat Yourself
+
+Princípio de engenharia que evita duplicar regras, cálculos ou lógica em vários lugares do sistema.
+
+Ideia prática:
+
+```txt
+Uma regra importante deve existir em um lugar claro e ser reutilizada por quem precisar dela.
+```
+
+Risco quando violado:
+
+```txt
+A mesma regra aparece copiada em vários pontos; depois uma alteração corrige um lugar e esquece outro, criando bug ou inconsistência.
+```
+
+### SOLID
+
+Conjunto de princípios de organização de software. Para o método atual, a leitura prática é:
+
+```txt
+Código dividido em partes menores, com responsabilidades claras, fácil de testar e difícil de quebrar.
+```
+
+O objetivo não é decorar a sigla neste momento, mas reconhecer o risco: código gerado ou alterado por IA pode funcionar hoje, mas ficar difícil de manter, testar e evoluir se misturar responsabilidades demais.
+
 ## Fluxo mental principal
 
 Prompt → Contexto → Spec → Agent → Iteração → Validação → Diff → Commit → Push → CI → Gate → Handoff
@@ -264,3 +290,61 @@ Gate/Handoff = manter controle humano, rastreabilidade e continuidade
 Próximo passo:
 
 Iniciar a primeira unidade do curso Microsoft e registrar os conceitos úteis no repositório.
+
+### 2026-06-11 — SOLID, DRY e paralelo com a refatoração do Dexa
+
+Novos aprendizados:
+
+- O curso alerta que código gerado por IA pode funcionar, mas ainda assim violar boas práticas como SOLID e DRY.
+- DRY significa Don't Repeat Yourself: não duplicar regras, cálculos ou lógica em vários lugares.
+- SOLID foi entendido de forma prática como: código dividido em partes menores, com responsabilidades claras, fácil de testar e difícil de quebrar.
+- A refatoração do Dexa Empresarial é um exemplo real desse aprendizado: reduzir risco estrutural, separar responsabilidades, localizar regras, facilitar testes e diminuir regressão.
+- A refatoração não é estética; é engenharia para tornar o sistema mais seguro de manter e evoluir.
+
+Paralelo com o Dexa:
+
+```txt
+Antes:
+- partes grandes demais;
+- regras misturadas;
+- busca de dados, cálculo, apresentação e integração próximos demais;
+- maior risco de regressão;
+- mais dificuldade para testar comportamento.
+
+Depois:
+- responsabilidades separadas;
+- regras mais localizadas;
+- comportamento protegido por testes;
+- commits pequenos;
+- CI validando;
+- gate antes de avançar;
+- handoff registrando decisões.
+```
+
+Mapa mental de arquitetura:
+
+```txt
+SOLID/DRY = qualidade estrutural do código
+Testes/CI/gate/commits/handoff = qualidade do processo
+```
+
+Frase consolidada:
+
+```txt
+A refatoração do Dexa é a aplicação prática dos princípios SOLID/DRY dentro de um fluxo de vibe coding governado: separar responsabilidades, reduzir duplicação, facilitar testes e diminuir risco de regressão.
+```
+
+Evolução do papel de engenharia:
+
+```txt
+O papel do engenheiro do Dexa foi promovido para Engenheiro de Software e Governança.
+
+Responsabilidade do papel:
+- conectar decisões técnicas com governança;
+- proteger arquitetura;
+- revisar escopo, diff e risco;
+- exigir testes quando necessário;
+- respeitar CI e gates;
+- manter rastreabilidade por commits e handoff;
+- transformar vibe coding em engenharia assistida por IA governada.
+```
