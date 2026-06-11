@@ -225,6 +225,42 @@ git fetch = descobrir e baixar referências remotas
 git pull = aplicar as mudanças remotas no trabalho local
 ```
 
-Próximo teste:
+### 2026-06-11 — CI, CI verde, DevSecOps e curso Microsoft
 
-Rodar `git fetch`, conferir o avanço de `origin/main`, depois rodar `git pull` e finalizar com `git status` limpo.
+Novos aprendizados conceituais:
+
+- CI significa Continuous Integration, ou Integração Contínua.
+- CI é um robô de validação que executa comandos definidos nos workflows do GitHub Actions.
+- CI verde significa que o commit passou nas verificações configuradas.
+- CI vermelho significa que alguma verificação configurada falhou.
+- CI pendente significa que a validação ainda está rodando.
+- CI verde não prova que o sistema está perfeito; prova apenas que passou no que foi configurado para testar.
+- Um CI básico pode validar compilação, testes, TypeScript e build.
+- Um CI pode detectar erro simples, como aspas esquecida, import quebrado ou falha de build.
+- Um CI só detecta erro de regra de negócio se existir teste cobrindo aquela regra.
+- DevSecOps adiciona segurança ao fluxo de desenvolvimento, colocando verificações de segurança dentro do pipeline.
+- Exemplos de segurança no fluxo: CodeQL, Dependabot, secret scanning, branch protection e security gates.
+- O problema não é usar IA para criar software; o problema é usar IA sem processo, testes, revisão, segurança e responsabilidade.
+- CI, DevSecOps, revisão de diff, gate humano e handoff ajudam a transformar vibe coding em engenharia assistida por IA.
+- O curso da Microsoft entra na camada inicial: ideia, prompt, requisitos, wireframe, protótipo e refinamento com Copilot Agent.
+- O método pessoal em construção adiciona a camada de governança: Git, GitHub, commit, push, pull, CI, gate, handoff e DevSecOps.
+
+Frase guia consolidada:
+
+```txt
+O problema não é vibe coding. O problema é vibe coding sem processo.
+```
+
+Mapa mental:
+
+```txt
+Curso Microsoft = aprender a pilotar o Copilot Agent
+Git/GitHub = versionar e controlar mudanças
+CI = validar automaticamente se algo quebrou
+DevSecOps = validar riscos de segurança
+Gate/Handoff = manter controle humano, rastreabilidade e continuidade
+```
+
+Próximo passo:
+
+Iniciar a primeira unidade do curso Microsoft e registrar os conceitos úteis no repositório.
