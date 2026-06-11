@@ -457,3 +457,31 @@ Síntese da unidade:
 ```txt
 O curso ensina que vibe coding é um processo iterativo. No método do usuário, esse processo foi elevado para engenharia assistida por IA governada: contexto, spec, executor, diff, testes, CI, gate, wireframe quando houver UX e handoff como memória operacional.
 ```
+1. Documentação
+- explicar funções importantes;
+- documentar APIs;
+- criar exemplos de uso;
+- manter handoffs e guias técnicos.
+
+2. Comentários de código
+- comentar apenas lógica complexa;
+- explicar decisões difíceis;
+- evitar comentário óbvio.
+
+3. Wiki / Base de conhecimento
+- guias de setup;
+- como rodar testes;
+- como funciona o motor de relatórios;
+- como funciona CR/CP/Fluxo de Caixa.
+
+4. Qualidade contínua
+- revisão automatizada;
+- identificar bugs potenciais;
+- localizar vulnerabilidades;
+- reforçar padrões;
+- apoiar refatoração;
+- analisar performance.
+
+Regra permanente:
+Sempre traçar paralelo entre o conceito estudado no curso e o Dexa Empresarial, pois o Dexa é o laboratório real de aplicação da governança de vibe coding.
+
