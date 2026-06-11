@@ -348,3 +348,112 @@ Responsabilidade do papel:
 - manter rastreabilidade por commits e handoff;
 - transformar vibe coding em engenharia assistida por IA governada.
 ```
+
+### 2026-06-11 — Processo de vibe coding, brownfield, wireframe e governança contínua
+
+Unidade estudada:
+
+```txt
+Examine o processo de codificação Vibe
+```
+
+Aprendizados principais:
+
+- O processo de vibe coding pode ser entendido em três fases: prever/planejar, desenvolver um protótipo inicial e evoluir recursos de forma iterativa.
+- Greenfield é projeto criado do zero, com liberdade maior para definir arquitetura, stack, pastas, padrões e fluxo desde o início.
+- Brownfield é projeto já existente, com código, regras, banco, usuários, histórico e risco de regressão.
+- O Dexa Empresarial é um projeto brownfield; portanto, vibe coding nele deve ser aplicado com escopo pequeno, cuidado arquitetural, testes, CI, gate e handoff.
+- A fase iterativa do vibe coding pode ser aplicada em projetos brownfield mesmo que o projeto não tenha nascido com vibe coding.
+- Em brownfield, vibe coding não significa deixar a IA reconstruir tudo; significa usar IA para evoluir o sistema em ciclos curtos, seguros e revisáveis.
+
+Paralelo prático com o Dexa:
+
+```txt
+Projeto brownfield:
+- não começar por liberdade criativa;
+- não pedir "refaça tudo";
+- não deixar executor decidir arquitetura sozinho.
+
+Fluxo correto:
+- consultar o Engenheiro de Software e Governança;
+- transformar a demanda em spec pequena;
+- enviar ao agente executor;
+- revisar diff;
+- validar comportamento;
+- rodar testes/CI;
+- passar pelo gate;
+- registrar handoff.
+```
+
+Separação de papéis consolidada:
+
+```txt
+Claude / Codex = agente executor
+Engenheiro de Software e Governança = direção, revisão, risco e decisão técnica
+Usuário = dono do produto e aprovador final
+```
+
+Regra consolidada:
+
+```txt
+Em projeto brownfield, o agente executor não deve decidir arquitetura sozinho. Ele executa uma spec validada pelo Engenheiro de Software e Governança.
+```
+
+Aprendizado sobre wireframe:
+
+- Foi identificado um gap no processo anterior: telas foram refinadas por tentativa prática, sem wireframe prévio.
+- Esse caminho funciona, mas aumenta retrabalho, conversa, risco de interpretação errada e inconsistência visual.
+- Wireframe deve entrar como rascunho visual antes da implementação.
+- Para telas existentes, o fluxo ideal é: print da tela atual → diagnóstico UX → mini-wireframe de melhoria → spec → implementação.
+- Para telas novas, o fluxo ideal é: mini-wireframe → spec → implementação.
+
+Regra nova para UX no Dexa:
+
+```txt
+Mudança visual relevante no Dexa
+→ mini-wireframe
+→ spec
+→ implementação
+→ diff
+→ testes/validação
+→ CI
+→ gate
+```
+
+Frase consolidada:
+
+```txt
+Wireframe = gate visual antes da implementação.
+```
+
+Aprendizado sobre documentação e qualidade contínua:
+
+- A IA no vibe coding não deve ser usada apenas para gerar código.
+- A IA também pode apoiar documentação automatizada, comentários relevantes, wikis, revisão de qualidade, identificação de bugs, análise de segurança, refatoração assistida e análise de performance.
+- Comentários de código devem explicar lógica complexa e decisões importantes, não repetir o óbvio.
+- Wikis e documentação devem preservar conhecimento do projeto: setup, testes, arquitetura, motor de relatórios, CR/CP, fluxo de caixa e guias de operação.
+- Revisão automatizada pode ajudar a localizar bugs, vulnerabilidades, gargalos de performance e violações de padrões.
+- A melhoria contínua do código passa a fazer parte do processo, não uma etapa isolada.
+
+Paralelo com governança:
+
+```txt
+IA como executor = gera ou altera código.
+IA como apoio de governança = documenta, revisa, audita, compara, explica, refatora e ajuda a preservar conhecimento.
+```
+
+Frases consolidadas:
+
+```txt
+A IA no vibe coding não deve ser usada apenas para gerar código. Ela também deve atuar como apoio à documentação, revisão de qualidade, refatoração, análise de segurança, performance e preservação de conhecimento do projeto.
+```
+
+```txt
+No Dexa, documentação, comentários relevantes, wikis, revisão automatizada, refatoração assistida e análise de performance passam a fazer parte da governança do desenvolvimento assistido por IA.
+```
+
+Síntese da unidade:
+
+```txt
+O curso ensina que vibe coding é um processo iterativo. No método do usuário, esse processo foi elevado para engenharia assistida por IA governada: contexto, spec, executor, diff, testes, CI, gate, wireframe quando houver UX e handoff como memória operacional.
+```
