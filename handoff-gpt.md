@@ -202,6 +202,29 @@ Fluxo remoto pelo GPT:
 
 GPT edita no GitHub → commit nasce no remoto → usuário roda git pull → computador atualizado
 
+### 2026-06-11 — Consolidação: fetch, pull e pedido de atualização remota
+
+Novos aprendizados:
+
+- `git fetch` consulta o GitHub, baixa as referências novas e atualiza `origin/main`, mas não altera os arquivos locais.
+- Depois do `git fetch`, o `git status` consegue mostrar se a branch local está atrás de `origin/main`.
+- `git pull` baixa e aplica as mudanças remotas nos arquivos locais.
+- Quando o GPT edita diretamente no GitHub, o commit nasce no remoto; depois o usuário pode usar `git fetch` para inspecionar e `git pull` para trazer a alteração.
+- O pedido operacional correto para o agente é: "Atualize o HANDOFF-GPT.md com os aprendizados desta etapa. Faça commit direto no GitHub e me retorne o SHA para eu puxar localmente com git pull."
+
+Fluxo didático aprendido:
+
+```txt
+git status → git fetch → git status → git pull → git status
+```
+
+Interpretação:
+
+```txt
+git fetch = descobrir e baixar referências remotas
+git pull = aplicar as mudanças remotas no trabalho local
+```
+
 Próximo teste:
 
-Rodar git pull localmente para receber esta atualização feita pelo GPT no GitHub.
+Rodar `git fetch`, conferir o avanço de `origin/main`, depois rodar `git pull` e finalizar com `git status` limpo.
